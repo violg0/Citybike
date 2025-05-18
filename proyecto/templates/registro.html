@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+
+  body, html {
+    height: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .container {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 450px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+
+  h1 {
+    text-align: center;
+    color: #b1e434;
+    margin-bottom: 20px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #b1e434;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+
+  input::placeholder {
+    color: #cccccc;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #b1e434;
+    color: #1a1a1a;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #d4f957;
+  }
+
+  .error {
+    color: #ff4c4c;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .container {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+</style>
+
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>Registro</h1>
+     <form method="POST">
+
+      <select id="idioma" name="idioma">
+        <option value="" {% if idioma == '' %}selected{% endif %}>Selecciona un idioma</option>
+        <option value="es" {% if idioma == 'es' %}selected{% endif %}>Español</option>
+        <option value="en" {% if idioma == 'en' %}selected{% endif %}>Inglés</option>
+      </select>
+      {% if errores.get('idioma') %}
+        <span class="error">{{ errores['idioma'] }}</span>
+      {% endif %}
+
+      <input type="text" name="nombre" placeholder="Nombre" value="{{ nombre or '' }}">
+      {% if errores.get('nombre') %}
+        <span class="error">{{ errores['nombre'] }}</span>
+      {% endif %}
+
+      <input type="text" name="apellidos" placeholder="Apellidos" value="{{ apellidos or '' }}">
+      {% if errores.get('apellidos') %}
+        <span class="error">{{ errores['apellidos'] }}</span>
+      {% endif %}
+
+      <input type="number" name="identificacion" placeholder="Identificación" value="{{ identificacion or '' }}">
+      {% if errores.get('identificacion') %}
+        <span class="error">{{ errores['identificacion'] }}</span>
+      {% endif %}
+
+      <input type="number" name="telefono" placeholder="Teléfono" value="{{ telefono or '' }}">
+      {% if errores.get('telefono') %}
+        <span class="error">{{ errores['telefono'] }}</span>
+      {% endif %}
+
+      <input type="email" name="email" placeholder="Email" value="{{ email or '' }}">
+      {% if errores.get('email') %}
+        <span class="error">{{ errores['email'] }}</span>
+      {% endif %}
+
+      <input type="password" name="contrasena" placeholder="Contraseña">
+      {% if errores.get('contrasena') %}
+        <span class="error">{{ errores['contrasena'] }}</span>
+      {% endif %}
+
+      <input type="password" name="confirmarContrasena" placeholder="Confirmar Contraseña">
+      {% if errores.get('confirmar') %}
+        <span class="error">{{ errores['confirmar'] }}</span>
+      {% endif %}
+
+      <input type="text" name="NombreUsuario" placeholder="Nombre de Usuario" value="{{ nombre_usuario or '' }}">
+      {% if errores.get('nombre_usuario') %}
+        <span class="error">{{ errores['nombre_usuario'] }}</span>
+      {% endif %}
+
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,393 @@
+.sign-up-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.sign-up-sign-up {
+  width: 100%;
+  height: 944px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(196, 193, 193, 1);
+}
+.sign-up-image1 {
+  top: -658px;
+  left: -306px;
+  width: 758px;
+  height: 1082px;
+  position: absolute;
+}
+.sign-up-image {
+  top: 66px;
+  left: 15px;
+  width: 392px;
+  height: 116px;
+  position: absolute;
+}
+.sign-up-rectangle2 {
+  top: 254px;
+  left: 24px;
+  width: 370px;
+  height: 668px;
+  position: absolute;
+  border-radius: 40px;
+}
+.sign-up-rectangle49input {
+  top: 757px;
+  left: 48px;
+  width: 334px;
+  height: 20px;
+  position: absolute;
+  border-color: rgba(166, 162, 162, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+.sign-up-btnbutton {
+  top: 794px;
+  left: 52px;
+  width: 308px;
+  height: 58px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(51, 78, 215, 1);
+}
+.sign-up-text10 {
+  top: 15px;
+  left: 89px;
+  color: rgba(255, 255, 255, 1);
+  width: 136px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text12 {
+  top: 867px;
+  left: 115px;
+  color: rgba(1, 1, 1, 1);
+  width: 201px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-input1 {
+  top: 631px;
+  left: 53px;
+  width: 126px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sign-up-text14 {
+  color: rgba(232, 230, 230, 1);
+  width: 126px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-input2 {
+  top: 413px;
+  left: 53px;
+  width: 126px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sign-up-text16 {
+  color: rgba(232, 230, 230, 1);
+  width: 126px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-input3 {
+  top: 465px;
+  left: 53px;
+  width: 126px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sign-up-text18 {
+  color: rgba(232, 230, 230, 1);
+  width: 126px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-input4 {
+  top: 512px;
+  left: 53px;
+  width: 126px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sign-up-text20 {
+  color: rgba(232, 230, 230, 1);
+  width: 126px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-input5 {
+  top: 572px;
+  left: 53px;
+  width: 126px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sign-up-text22 {
+  color: rgba(232, 230, 230, 1);
+  width: 126px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-input6 {
+  top: 740px;
+  left: 53px;
+  width: 126px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sign-up-text24 {
+  color: rgba(232, 230, 230, 1);
+  width: 126px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-input7 {
+  top: 684px;
+  left: 53px;
+  width: 180px;
+  height: 33px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sign-up-text26 {
+  color: rgba(232, 230, 230, 1);
+  width: 180px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-text28 {
+  top: 336px;
+  left: 69px;
+  color: rgba(0, 0, 0, 1);
+  width: 292px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-rectangle41 {
+  top: 259px;
+  left: 36px;
+  width: 308px;
+  height: 58px;
+  position: absolute;
+}
+.sign-up-btn {
+  top: 259px;
+  left: 48px;
+  width: 307px;
+  height: 58px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sign-up-text30 {
+  top: 15px;
+  color: rgba(255, 255, 255, 1);
+  width: 144px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-rectangle1 {
+  top: 0px;
+  left: 143px;
+  width: 164px;
+  height: 58px;
+  position: absolute;
+  border-radius: 40px;
+}
+.sign-up-text32 {
+  top: 275px;
+  left: 221px;
+  color: rgba(255, 255, 255, 1);
+  width: 123px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sign-up-rectangle43input {
+  top: 429px;
+  left: 48px;
+  width: 334px;
+  height: 20px;
+  position: absolute;
+  border-color: rgba(166, 162, 162, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+.sign-up-rectangle44input {
+  top: 482px;
+  left: 48px;
+  width: 334px;
+  height: 20px;
+  position: absolute;
+  border-color: rgba(166, 162, 162, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+.sign-up-rectangle45input {
+  top: 535px;
+  left: 48px;
+  width: 334px;
+  height: 20px;
+  position: absolute;
+  border-color: rgba(166, 162, 162, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+.sign-up-rectangle46input {
+  top: 589px;
+  left: 48px;
+  width: 334px;
+  height: 20px;
+  position: absolute;
+  border-color: rgba(166, 162, 162, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+.sign-up-rectangle47input {
+  top: 647px;
+  left: 52px;
+  width: 334px;
+  height: 20px;
+  position: absolute;
+  border-color: rgba(166, 162, 162, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+.sign-up-rectangle48input {
+  top: 701px;
+  left: 48px;
+  width: 334px;
+  height: 20px;
+  position: absolute;
+  border-color: rgba(166, 162, 162, 1);
+  border-style: solid;
+  border-width: 1px;
+}
