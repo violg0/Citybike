@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXyIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgxNSkiPjxwYXRoIGQ9Ik0tMjUgMCBMNTAgLTUwIEw3NSAwIEwwIDc1IFoiIHN0cm9rZT0iIzU1ZjAyZCIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWExYTFhIi8+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuXykiLz48L3N2Zz4=');
+    position: relative;
+    min-height: 100vh;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    border-bottom: 1px solid rgba(85, 240, 45, 0.3);
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #55f02d;
+    display: flex;
+    align-items: center;
+}
+
+.page-title i {
+    margin-right: 10px;
+}
+
+.filter-button {
+    background-color: rgba(85, 240, 45, 0.2);
+    color: #55f02d;
+    border: 1px solid #55f02d;
+    border-radius: 20px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: rgba(85, 240, 45, 0.3);
+}
+
+.filter-button i {
+    margin-right: 8px;
+}
+
+.map-container {
+    margin: 15px 0;
+    width: 100%;
+    height: calc(100vh - 200px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.map-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.legend-full {
+    background-color: red;
+}
+
+.legend-medium {
+    background-color: orange;
+}
+
+.legend-available {
+    background-color: #55f02d;
+}
+
+.nav-bar {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    background-color: rgba(45, 44, 44, 0.9);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #55f02d;
+    z-index: 100;
+}
+
+.nav-icon {
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-icon:hover {
+    color: #55f02d;
+    transform: scale(1.1);
+}
+
+.nav-icon.active {
+    color: #55f02d;
+}
+
+.station-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #55f02d;
+    border: 2px solid white;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.station-marker:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    z-index: 6;
+}
+
+.station-marker.full {
+    background-color: red;
+}
+
+.station-marker.medium {
+    background-color: orange;
+}
+
+.station-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    transform: translateY(-120%);
+}
+
+.station-marker:hover .station-tooltip {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        height: calc(100vh - 180px);
+    }
+    .page-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        height: calc(100vh - 170px);
+    }
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .filter-button {
+        align-self: flex-end;
+    }
+}

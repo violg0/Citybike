@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="container">
+      <h1>Iniciar Sesión</h1>
+      <form method="POST">
+        <input type="text" name="usuario" placeholder="Nombre de usuario o email" required />
+        <input type="password" name="contrasena" placeholder="Contraseña" required />
+        <button type="submit">Login</button>
+      </form>
+      
+      <div class="register-link">
+        ¿No tienes cuenta? <a href="{{ url_for('registro') }}">Registrarse</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

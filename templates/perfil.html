@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITY BIKE - Perfil de Usuario</title>
+    <link rel="stylesheet" href="/static/css/perfil.css">
+</head>
+<body>
+    <div class="background-lines"></div>
+
+    <div class="header">
+        <div class="logo">
+            <div class="bike-icon"><img src="/static/assets/bicicletalogo.png"></div>
+            <div class="logo-text">
+                <span class="city-text">CITY</span>
+                <span class="bike-text">BIKE</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="profile">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <span style="font-size: 2.5em;">👤</span>
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-name">usuario</h1>
+                    <p class="profile-membership"></p>
+                </div>
+                
+            </div>
+            
+            <div class="stats-section">
+                
+            </div>
+        </div>
+
+        <h2 class="section-title">Viajes recientes</h2>
+        <div class="recent-trips">
+            <div class="trip-card">
+                <div class="trip-icon">🚲</div>
+                <div class="trip-info">
+                    <h3 class="trip-route">Estación Centro → Estación Norte</h3>
+                    <p class="trip-details">Hoy - 14:35 | 3.2 km | 15 minutos</p>
+                </div>
+                <div class="trip-price">0</div>
+            </div>
+            <div class="trip-card">
+                <div class="trip-icon">🚲</div>
+                <div class="trip-info">
+                    <h3 class="trip-route">Estación Norte → Estación Centro</h3>
+                    <p class="trip-details">Hoy - 08:20 | 3.2 km | 44 minutos</p>
+                </div>
+                <div class="trip-price">3.500</div>
+            </div>
+            <div class="trip-card">
+                <div class="trip-icon">🚲</div>
+                <div class="trip-info">
+                    <h3 class="trip-route">Estación Sur → Estación Oriente</h3>
+                    <p class="trip-details">Ayer - 19:45 | 4.5 km | 38 minutos</p>
+                </div>
+                <div class="trip-price">1.750</div>
+            </div>
+            <div class="trip-card">
+                <div class="trip-icon">🚲</div>
+                <div class="trip-info">
+                    <h3 class="trip-route">Estación Oriente → Estación Sur</h3>
+                    <p class="trip-details">Ayer - 09:15 | 4.5 km | 20 minutos</p>
+                </div>
+                <div class="trip-price">0</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Estaciones frecuentes</h2>
+        <div class="saved-stations">
+            <div class="station-cards">
+                <div class="station-card">
+                    <h3 class="station-name">Estación Centro</h3>
+                    <p class="station-bikes">8 bicicletas disponibles</p>
+                </div>
+                <div class="station-card">
+                    <h3 class="station-name">Estación Norte</h3>
+                    <p class="station-bikes">5 bicicletas disponibles</p>
+                </div>
+                <div class="station-card">
+                    <h3 class="station-name">Estación Sur</h3>
+                    <p class="station-bikes">12 bicicletas disponibles</p>
+                </div>
+                <div class="station-card">
+                    <h3 class="station-name">Estación Oriente</h3>
+                    <p class="station-bikes">3 bicicletas disponibles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="nav-bar">
+            <i class="fas fa-home nav-icon active"onclick="window.location.href='/inicio'"></i>
+            <i class="far fa-heart nav-icon"></i>
+            <i class="far fa-map nav-icon" onclick="window.location.href='/mapa'"></i>
+            <i class="fas fa-bicycle nav-icon"></i>
+            <i class="fas fa-user nav-icon" onclick="window.location.href='/perfil'"></i>
+        </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: #181818;
+  color: #f5f5f5;
+  position: relative;
+}
+
+body {
+  background-image: url("/static/assets/logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-attachment: fixed;
+  background-color: #181818;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #181818cc 60%, #232323cc 100%);
+  /* Puedes agregar blur si quieres más suavidad: */
+  /* backdrop-filter: blur(2px); */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.content-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  background-color: #232323;
+  padding: 32px 28px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 0 18px rgba(85, 240, 45, 0.10), 0 0 2px #000;
+}
+
+h1 {
+  text-align: center;
+  color: #b1e434;
+  margin-bottom: 22px;
+  letter-spacing: 1px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #b1e434;
+  background-color: #181818;
+  color: #f5f5f5;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #55f02d;
+  outline: none;
+}
+
+input::placeholder {
+  color: #b1e434;
+  opacity: 0.8;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #b1e434;
+  color: #181818;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 18px;
+  font-size: 1.1em;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #55f02d;
+  color: #181818;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 1em;
+  color: #f5f5f5;
+}
+
+.register-link a {
+  color: #b1e434;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.register-link a:hover {
+  color: #55f02d;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-size: 350px auto;
+  }
+  .container {
+    padding: 18px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-size: 80vw auto;
+    background-position: top center;
+  }
+}
