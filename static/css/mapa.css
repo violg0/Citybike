@@ -112,35 +112,32 @@ body {
 }
 
 .nav-bar {
-    position: sticky;
+    position: fixed;
+    left: 0;
     bottom: 0;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
     height: 70px;
-    background-color: rgba(45, 44, 44, 0.9);
+    background-color: rgba(31, 31, 31, 0.97);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid #55f02d;
+    border-top: 2px solid #55f02d;
     z-index: 100;
+    box-shadow: 0 -2px 12px #0005;
 }
 
 .nav-icon {
-    font-size: 24px;
+    font-size: 1.7em;
     color: #fff;
     padding: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.nav-icon:hover {
-    color: #55f02d;
-    transform: scale(1.1);
-}
-
+.nav-icon:hover,
 .nav-icon.active {
     color: #55f02d;
+    transform: scale(1.13);
 }
 
 .station-marker {

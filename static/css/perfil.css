@@ -237,33 +237,32 @@ body {
 }
 
 .nav-bar {
-    position: sticky;
+    position: fixed;
+    left: 0;
     bottom: 0;
-    width: 100%;
-    max-width: 1200px;
-    margin:  auto;
+    width: 100vw;
     height: 70px;
-    background-color: rgba(31, 31, 31, 0.942);
+    background-color: rgba(31, 31, 31, 0.97);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid #55f02d;
+    border-top: 2px solid #55f02d;
     z-index: 100;
+    box-shadow: 0 -2px 12px #0005;
 }
 
 .nav-icon {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    color: white;
+    font-size: 1.7em;
+    color: #fff;
+    padding: 10px;
     cursor: pointer;
     transition: color 0.3s, transform 0.3s;
 }
 
 .nav-icon:hover,
-.nav-item.active .nav-icon,
 .nav-icon.active {
-    color: #4cff00;
-    transform: scale(1.1);
+    color: #55f02d;
+    transform: scale(1.13);
 }
 
 @media (max-width: 768px) {
