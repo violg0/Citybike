@@ -13,7 +13,7 @@
         }
         
         body {
-            background-color: #000;
+            background-color: #1a1a1a;
             color: #fff;
             min-height: 100vh;
         }
@@ -22,7 +22,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXyIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgxNSkiPjxwYXRoIGQ9Ik0tMjUgMCBMNTAgLTUwIEw3NSAwIEwwIDc1IFoiIHN0cm9rZT0iIzU1ZjAyZCIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAwIi8+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuXykiLz48L3N2Zz4=');
+background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuXyIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgxNSkiPjxwYXRoIGQ9Ik0tMjUgMCBMNTAgLTUwIEw3NSAwIEwwIDc1IFoiIHN0cm9rZT0iIzU1ZjAyZCIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWExYTFhIi8+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuXykiLz48L3N2Zz4=');
             position: relative;
             min-height: 100vh;
         }
@@ -125,7 +125,7 @@
             max-width: 1200px;
             margin: 0 auto;
             height: 70px;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(45, 44, 44, 0.9);
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -232,9 +232,7 @@
             <div class="page-title">
                 <i class="fas fa-map-marker-alt"></i> Mapa de Estaciones
             </div>
-            <div class="filter-button">
-                <i class="fas fa-filter"></i> Filtrar
-            </div>
+            <
         </div>
         
         <div class="map-container" id="map">
@@ -258,12 +256,12 @@
             </div>
         </div>
         
-        <div class="nav-bar">
-            <a href="{{ url_for('inicio') }}"><i class="fas fa-home nav-icon"></i></a>
+         <div class="nav-bar">
+            <i class="fas fa-home nav-icon active"onclick="window.location.href='/inicio'"></i>
             <i class="far fa-heart nav-icon"></i>
-            <i class="far fa-map nav-icon active"></i>
+            <i class="far fa-map nav-icon" onclick="window.location.href='/mapa'"></i>
             <i class="fas fa-bicycle nav-icon"></i>
-            <i class="fas fa-user nav-icon"></i>
+            <i class="fas fa-user nav-icon" onclick="window.location.href='/perfil'"></i>
         </div>
     </div>
 

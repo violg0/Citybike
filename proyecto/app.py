@@ -1,15 +1,38 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 
-app = Flask(__name__)
-app.secret_key = 'tu_clave_secreta'  # necesario para mensajes flash
 
-# Simulamos IDs registrados (en realidad sería base de datos)
+#no
+from flask import Flask, render_template, redirect, url_for, request, session, jsonify
+from datetime import datetime
+import os
+from werkzeug.security import generate_password_hash, check_password_hash
+
+app = Flask(__name__)
+app.secret_key = 'tu_clave_secreta' 
+#no 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///citybike.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+
 ids_registrados = ['123456', '654321']
+
+
+
+usuario_prueba = {
+    'id': 1,
+    'nombre': 'a',
+    'apellido': 'a',
+    'email': 'a@.com',
+    'password': '1',  
+    'fecha_registro': datetime(2025, 1, 1),
+    'tipo_membresia': 'Premium'
+}
+
+
 
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
     if request.method == 'POST':
-        # Recoger datos del formulario
         idioma = request.form.get('idioma', '').strip()
         nombre = request.form.get('nombre', '').strip()
         apellidos = request.form.get('apellidos', '').strip()
@@ -22,7 +45,6 @@ def registro():
 
         errores = {}
 
-        # Validaciones
         if not idioma:
             errores['idioma'] = "Selecciona un idioma."
         if not nombre:
@@ -50,11 +72,9 @@ def registro():
                                    telefono=telefono, email=email,
                                    nombre_usuario=nombre_usuario)
         
-        # Aquí agregarías el código para guardar los datos en la base de datos
         flash("Registro exitoso")
         return redirect(url_for('inicio'))
 
-    # GET
     return render_template('registro.html', errores={},
                            idioma='', nombre='', apellidos='',
                            identificacion='', telefono='',
@@ -68,13 +88,13 @@ def inicio():
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form.get('email', '').strip()
+        usuario = request.form.get('usuario', '').strip()
         contrasena = request.form.get('contrasena', '').strip()
 
-        # Simulación de usuario existente
-        if email == 'ejemplo@correo.com' and contrasena == '1234':
+        if (usuario in ['a', 'a@.com']) and contrasena == '1':
+            session['usuario_id'] = usuario  # Guardar en la sesión
             flash('Inicio de sesión exitoso')
-            return redirect(url_for('home'))  # Cambia a tu ruta post-login
+            return redirect(url_for('inicio'))  
         else:
             flash('Credenciales inválidas. Intenta de nuevo.')
             return redirect(url_for('login'))
@@ -82,9 +102,60 @@ def login():
     return render_template('login.html')
 
 
+
 @app.route('/mapa')
 def mapa():
     return render_template('mapa.html')
+
+
+
+
+
+
+@app.route('/logout')
+def logout():
+    session.pop('usuario_id', None)
+    return redirect(url_for('login'))
+
+
+@app.route('/perfil')
+def perfil():
+    if 'usuario_id' not in session:
+        return redirect(url_for('login'))
+    
+    usuario_id = session['usuario_id']
+    
+    
+    return render_template(
+        'perfil.html', 
+       
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
