@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa - CITY-N-BIKE</title>
+    <link rel="stylesheet" href="/static/css/mapa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="page-header">
+            <div class="page-title">
+                <i class="fas fa-map-marker-alt"></i> Mapa de Estaciones
+            </div>
+            <
+        </div>
+        
+        <div class="map-container" id="map">
+           
+            
+            <div class="map-overlay">
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <div class="legend-color legend-available"></div>
+                        <span>Disponible</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color legend-medium"></div>
+                        <span>Pocas bicicletas</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color legend-full"></div>
+                        <span>Sin bicicletas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <div class="nav-bar">
+            <i class="fas fa-home nav-icon active"onclick="window.location.href='/inicio'"></i>
+            <i class="far fa-heart nav-icon"></i>
+            <i class="far fa-map nav-icon" onclick="window.location.href='/mapa'"></i>
+            <i class="fas fa-bicycle nav-icon"></i>
+            <i class="fas fa-user nav-icon" onclick="window.location.href='/perfil'"></i>
+        </div>
+    </div> <!-- cierre de .app-container -->
+
+    <div class="nav-bar">
+        <i class="fas fa-home nav-icon" onclick="window.location.href='/inicio'"></i>
+        <i class="far fa-heart nav-icon"></i>
+        <i class="far fa-map nav-icon active" onclick="window.location.href='/mapa'"></i>
+        <i class="fas fa-bicycle nav-icon"></i>
+        <i class="fas fa-user nav-icon" onclick="window.location.href='/perfil'"></i>
+    </div>
+</body>
+</html>
+
+    <script>
+        // Inicializar el mapa en Medellín
+        const map = L.map('map').setView([6.2476, -75.5658], 13);
+        
+        // Agregar capa de mapa base de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        }).addTo(map);
+        
+        // Estilo oscuro para el mapa (para combinar con el tema)
+        document.querySelector('.leaflet-container').style.filter = 'invert(90%) hue-rotate(180deg)';
+        
+        // Datos de estaciones (coordenadas aproximadas de Medellín)
+        const stations = [
+            { name: "Estación centro", lat: 6.2476, lng: -75.5658, bikes: 5 },
+            { name: "Estación norte", lat: 6.2776, lng: -75.5738, bikes: 3 },
+            { name: "Estación sur", lat: 6.2176, lng: -75.5758, bikes: 7 },
+            { name: "Estación occidente", lat: 6.2476, lng: -75.6058, bikes: 2 },
+            { name: "Estación oriente", lat: 6.2476, lng: -75.5358, bikes: 8 },
+            { name: "Estación universidad", lat: 6.2676, lng: -75.5658, bikes: 4 },
+            { name: "Estación poblado", lat: 6.2176, lng: -75.5658, bikes: 0 },
+            { name: "Estación laureles", lat: 6.2476, lng: -75.5868, bikes: 1 },
+            { name: "Estación estadio", lat: 6.2576, lng: -75.5958, bikes: 6 }
+        ];
+        
+        // Crear marcadores para cada estación
+        stations.forEach(station => {
+            // Determinar estado de disponibilidad
+            let stationClass = '';
+            if (station.bikes === 0) {
+                stationClass = 'full';
+            } else if (station.bikes <= 2) {
+                stationClass = 'medium';
+            }
+            
+            // Crear div para el marcador personalizado
+            const markerEl = document.createElement('div');
+            markerEl.className = `station-marker ${stationClass}`;
+            
+            // Crear tooltip
+            const tooltipEl = document.createElement('div');
+            tooltipEl.className = 'station-tooltip';
+            tooltipEl.textContent = `${station.name}: ${station.bikes} bicicletas`;
+            markerEl.appendChild(tooltipEl);
+            
+            // Agregar el marcador al mapa usando L.divIcon
+            const customIcon = L.divIcon({
+                className: 'custom-marker-container',
+                html: markerEl,
+                iconSize: [20, 20]
+            });
+            
+            const marker = L.marker([station.lat, station.lng], { icon: customIcon })
+                .addTo(map)
+                .bindPopup(`
+                    <strong>${station.name}</strong><br>
+                    <i class="fas fa-bicycle"></i> ${station.bikes} bicicletas disponibles
+                `);
+            
+            // Añadir evento click
+            marker.on('click', function() {
+                this.openPopup();
+            });
+        });
+    </script>
+</body>
+</html>

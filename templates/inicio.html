@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITY-N-BIKE</title>
+    <link rel="stylesheet" href="/static/css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        
+               <div class="logo-container">
+                    <img src="/static/assets/bicicletalogo_alt.png" class="logo-img">
+                    <div class="city-text">CITY</div>
+                    <div class="n-bike-text">BIKE</div>
+                </div>
+                
+   
+        
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar...">
+        </div>
+        
+        <div class="stations-row">
+            <div class="station-pill">Estación norte</div>
+            <div class="station-pill">Estación sur</div>
+            <div class="station-pill">Estación centro</div>
+            <div class="station-pill">Estación occidente</div>
+            <div class="station-pill">Estación oriente</div>
+        </div>
+        
+        <div class="station-cards">
+            <div class="station-card">
+                <div class="station-image">
+                    <img src="/static/assets/Encicla-abril-5-2023.jpg" alt="Estación centro">
+                </div>
+                <div class="station-info">
+                    <div class="station-name">Estación centro</div>
+                    <div class="bikes-available"><i class="fas fa-bicycle"></i> 5 bicicletas disponibles</div>
+                </div>
+            </div>
+            
+            <div class="station-card">
+                <div class="station-image">
+                    <img src="/static/assets/bb.jpg"alt="Estación norte">
+                </div>
+                <div class="station-info">
+                    <div class="station-name">Estación norte</div>
+                    <div class="bikes-available"><i class="fas fa-bicycle"></i> 3 bicicletas disponibles</div>
+                </div>
+            </div>
+            
+            <div class="station-card">
+                <div class="station-image">
+                    <img src="/static/assets/images (1).jpg"alt="Estación sur">
+                </div>
+                <div class="station-info">
+                    <div class="station-name">Estación sur</div>
+                    <div class="bikes-available"><i class="fas fa-bicycle"></i> 7 bicicletas disponibles</div>
+                </div>
+            </div>
+            
+            <div class="station-card">
+                <div class="station-image">
+                    <img src="/static/assets/images.jpg" alt="Estación occidente">
+                </div>
+                <div class="station-info">
+                    <div class="station-name">Estación occidente</div>
+                    <div class="bikes-available"><i class="fas fa-bicycle"></i> 2 bicicletas disponibles</div>
+                </div>
+            </div>
+            
+            <div class="station-card">
+                <div class="station-image">
+                    <img src="/static/assets/descarga.jpg" alt="Estación oriente">
+                </div>
+                <div class="station-info">
+                    <div class="station-name">Estación oriente</div>
+                    <div class="bikes-available"><i class="fas fa-bicycle"></i> 8 bicicletas disponibles</div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <div class="nav-bar">
+            <i class="fas fa-home nav-icon active"onclick="window.location.href='/inicio'"></i>
+            <i class="far fa-heart nav-icon"></i>
+            <i class="far fa-map nav-icon" onclick="window.location.href='/mapa'"></i>
+            <i class="fas fa-bicycle nav-icon"></i>
+            <i class="fas fa-user nav-icon" onclick="window.location.href='/perfil'"></i>
+        </div>
+    </div>
+</body>
+</html>
