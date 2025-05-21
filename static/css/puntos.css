@@ -1,0 +1,300 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                #00ff2a 20px,
+                #00ff2a 21px
+            );
+            opacity: 0.15;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo svg {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            line-height: 1;
+        }
+
+        .logo .city {
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .logo .bike {
+            color: #00ff2a;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+        }
+
+        .search-icon {
+            color: #00ff2a;
+            margin-right: 10px;
+        }
+
+        .points-card {
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .points-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .current-points {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .points-label {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .points-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #00ff2a;
+        }
+
+        .tier-badge {
+            background: linear-gradient(45deg, #00ff2a, #008f17);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .progress-container {
+            margin: 15px 0;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: #333;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #00ff2a;
+            width: 65%;
+            border-radius: 4px;
+        }
+
+        .tier-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .section-title {
+            margin: 30px 0 15px;
+            font-size: 20px;
+        }
+
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .history-item {
+            background-color: rgba(40, 40, 40, 0.8);
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .history-item-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .history-icon {
+            background-color: rgba(0, 255, 42, 0.2);
+            color: #00ff2a;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .history-details h4 {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+
+        .history-details p {
+            margin: 0;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .history-points {
+            font-weight: bold;
+            color: #00ff2a;
+        }
+
+        .rewards-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0 15px;
+        }
+
+        .view-all {
+            color: #00ff2a;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .reward-card {
+            background-color: rgba(40, 40, 40, 0.8);
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .reward-icon {
+            background-color: rgba(0, 255, 42, 0.2);
+            color: #00ff2a;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+
+        .reward-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .reward-points {
+            font-size: 12px;
+            color: #ccc;
+            margin: 0;
+        }
+
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(20, 20, 20, 0.9);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #333;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .nav-item.active {
+            color: #00ff2a;
+        }
+
+        .nav-icon {
+            margin-bottom: 5px;
+        }
+
+
+        .logo-img {
+  width: 100px;    
+  height: auto;  
+  display: block; 
+}

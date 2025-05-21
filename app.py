@@ -80,7 +80,8 @@ def registro():
                            identificacion='', telefono='',
                            email='', nombre_usuario='')
     
-    
+      
+
 @app.route('/inicio')
 def inicio():
     return render_template('inicio.html')
@@ -113,6 +114,9 @@ def planes():
     return render_template('planes.html')
 
 
+@app.route('/puntos')
+def puntos():
+    return render_template('puntos.html')
 
 
 
@@ -134,9 +138,6 @@ def perfil():
         'perfil.html', 
        
     )
-
-
-
 
 
 
