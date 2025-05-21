@@ -108,6 +108,10 @@ def mapa():
     return render_template('mapa.html')
 
 
+@app.route('/planes')
+def planes():
+    return render_template('planes.html')
+
 
 
 
