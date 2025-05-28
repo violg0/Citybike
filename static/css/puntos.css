@@ -293,8 +293,25 @@ body {
         }
 
 
+
         .logo-img {
   width: 100px;    
   height: auto;  
   display: block; 
 }
+
+
+.nav-icon {
+    font-size: 1.5em;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-icon:hover,
+.nav-icon.active {
+    color: #55f02d;
+    transform: scale(1.13);
+}
+

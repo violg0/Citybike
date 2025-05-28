@@ -20,8 +20,8 @@ ids_registrados = ['123456', '654321']
 
 usuario_prueba = {
     'id': 1,
-    'nombre': 'a',
-    'apellido': 'a',
+    'nombre': 'alex',
+    'apellido': 'acevedo',
     'email': 'a@.com',
     'password': '1',  
     'fecha_registro': datetime(2025, 1, 1),
@@ -92,7 +92,7 @@ def login():
         usuario = request.form.get('usuario', '').strip()
         contrasena = request.form.get('contrasena', '').strip()
 
-        if (usuario in ['a', 'a@.com']) and contrasena == '1':
+        if (usuario in ['alex', 'a@.com']) and contrasena == '1':
             session['usuario_id'] = usuario  # Guardar en la sesión
             flash('Inicio de sesión exitoso')
             return redirect(url_for('inicio'))  
@@ -138,26 +138,6 @@ def perfil():
         'perfil.html', 
        
     )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
